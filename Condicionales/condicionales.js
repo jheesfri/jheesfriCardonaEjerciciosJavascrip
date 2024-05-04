@@ -243,8 +243,6 @@ console.log("Ejercicio 11")
 let color_user = prompt("Ingrese un color")
 switch (color_user) {
     case "blanco":
-        console.log("falta de color");
-        break;
     case "negro":
         console.log("falta de color");
         break;
