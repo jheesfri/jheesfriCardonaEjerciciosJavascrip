@@ -7,13 +7,36 @@ for (let mul = 0; mul <= 10; mul++) {
 //ejercicio_2
 
 let numerUsuario = parseInt(prompt("Ingresa un numero"))
-let suma = numeroAdivinanza
+let suma = numerUsuario
 
 while (numerUsuario != 0) {
+    
     numerUsuario = parseInt(prompt("Ingresa un numero"))
     suma += numerUsuario
 }
 console.log(suma)
+
+//ejercicio_3
+
+console.log("ejercicio 3")
+
+let intentos = 0 
+let adivinanza = 65
+let numeroUsuario = 0
+while (numeroUsuario != adivinanza) {
+    numeroUsuario = parseInt(prompt("Ingresa un numero"))
+    
+    if(numeroUsuario < adivinanza){
+        console.log("El numero es menor sigue intentando ")
+    }else if(numeroUsuario > adivinanza){
+        console.log("El numero es mayor sigue intentando ")
+    }else{
+        
+    }
+    intentos ++
+}
+console.log("Adivinaste")
+console.log("el numero de intentos fueron " + intentos)
 
 //ejercicio_4
 
@@ -103,12 +126,12 @@ console.log("los numeros impares sumaron " + sumaImpar)
 
 console.log("ejercicio 11")
 
-let arrayP11 = [10,51,85,96,45,12,32,76,54,61]
+let arrayP11 = [10, 51, 85, 96, 45, 12, 32, 76, 54, 61]
 console.log(arrayP11)
 let numMayorP11 = arrayP11[0]
 let numMenorP11 = arrayP11[0]
-for(let i = 0; i < arrayP11.length; i ++){
-    if(numMayorP11 <= arrayP11[i]){
+for (let i = 0; i < arrayP11.length; i++) {
+    if (numMayorP11 <= arrayP11[i]) {
         numMayorP11 = arrayP11[i]
     }
 }
@@ -118,12 +141,12 @@ console.log("El numero mayor es " + numMayorP11)
 
 console.log("ejercicio 12")
 
-let arrayP12 = [10,51,85,96,45,12,32,76,54,61]
+let arrayP12 = [10, 51, 85, 96, 45, 12, 32, 76, 54, 61]
 console.log(arrayP12)
 let numMayorP12 = arrayP12[0]
 let numMenorP12 = arrayP12[0]
-for(let i = 0; i < arrayP12.length; i ++){
-    if(numMenorP12 >= arrayP12[i]){
+for (let i = 0; i < arrayP12.length; i++) {
+    if (numMenorP12 >= arrayP12[i]) {
         numMenorP12 = arrayP12[i]
     }
 }
@@ -134,23 +157,23 @@ console.log("Ejercicio 13")
 let nombreJugador1P13 = prompt("Ingresa el nombre dek jugador Nº 1")
 let nombreJugador2P13 = prompt("Ingresa el nombre dek jugador Nº 2")
 let jugador1P13, jugador2P13
-let ganadorP13 
-do{ 
+let ganadorP13
+do {
     jugador1P13 = prompt("jugador 1 ingresa 1 para ¨PIEDRA¨, 2 para ¨PAPEL¨ O 3 para ¨TIJERA¨").trim()
     jugador2P13 = prompt("jugador 2 ingresa 1 para ¨PIEDRA¨, 2 para ¨PAPEL¨ O 3 para ¨TIJERA¨").trim()
 
     if (jugador1P13 == 1 && jugador2P13 == 3) {
-        console.log ("El ganador es: " + nombreJugador1P13)
-    }else if (jugador1P13 == 2 && jugador2P13 == 1) {
-        console.log ("El ganador es: " + nombreJugador1P13)
-    }else if ( jugador1P13 == 3 && jugador2P13 == 2){
-        console.log ("El ganador es: " + nombreJugador1P13)
-    }else if ( jugador1P13 == jugador2P13){
+        console.log("El ganador es: " + nombreJugador1P13)
+    } else if (jugador1P13 == 2 && jugador2P13 == 1) {
+        console.log("El ganador es: " + nombreJugador1P13)
+    } else if (jugador1P13 == 3 && jugador2P13 == 2) {
+        console.log("El ganador es: " + nombreJugador1P13)
+    } else if (jugador1P13 == jugador2P13) {
         alert("ËMPATE¨ Vuelve a jugar ")
     }
-}while (jugador1P13 == jugador2P13)
+} while (jugador1P13 == jugador2P13)
 
-console.log ("El ganador es: " + nombreJugador2P13)
+console.log("El ganador es: " + nombreJugador2P13)
 
 
 // ejercicio_14
@@ -159,6 +182,31 @@ console.log("Ejercicio 14")
 
 let asterisco = ""
 for (let i = 0; i < 5; i++) {
-    asterisco = asterisco + "*"
+    asterisco = asterisco + " *"
     console.log(asterisco)
 }
+
+// ejercicio_15
+console.log("Ejercicio 15")
+
+let asteriscos = [" *", " * *", " * * *", " * * * *", " * * * * *"]
+for (let i = 4; i >= 0; i--) {
+    console.log(asteriscos[i])
+}
+
+//ejercicio_16
+
+let arrayP16 = [50,51,52,53,54,55,56,57,58,59];
+
+for (let i = 0; i < arrayP16.length; i++) {
+
+  for (let j = 0; j < arrayP16.length; j++) {
+
+    if (arrayP16[j] > arrayP16[j + 1]) {
+
+      [arrayP16[j], arrayP16[j + 1]] = [arrayP16[j + 1], arrayP16[j]]
+    }
+  }
+}
+
+console.log("Array ordenado:", arrayP16)

@@ -1,0 +1,20 @@
+.textoColorGris{
+    color: darkgrey;
+}
+
+.contenedorPadreMs{
+    display: flex;
+    width: 40vw;
+    height: 50vh;
+}
+.contendedorHijo2Ms{
+    border: red solid;
+    width: 30vw;
+    height: 25vh;
+}
+.nietoH2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
